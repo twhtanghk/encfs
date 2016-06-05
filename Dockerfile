@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-MAINTAINER Marcus Hughes <hello@msh100.uk>
+MAINTAINER Marcus Hughes <hello@msh100.ukk>
 
 # Update apt and install encfs
 ENV DEBIAN_FRONTEND noninteractive
