@@ -10,4 +10,3 @@ ADD mount.sh /
 RUN chmod +x /mount.sh
 
 CMD ["/mount.sh"]
-
