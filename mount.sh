@@ -29,7 +29,7 @@ mkdir -p $MOUNT_SOURCE
 mkdir -p $MOUNT_TARGET
 
 # Cleanup any existing mount
-fusermount -u $MOUNT_TARGET
+umount -f $MOUNT_TARGET
 
 # Mount away!
 if [ "$ENCFS_PASS" ]; then
