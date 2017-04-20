@@ -6,6 +6,8 @@ services:
     volumes:
       - /lib/modules:/lib/modules
       - ./raw:/raw
+    ports:
+      - 22
     environment:
       - MOUNT_SOURCE=/raw
       - MOUNT_TARGET=/data
