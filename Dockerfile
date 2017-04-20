@@ -1,5 +1,5 @@
 FROM itscaro/debian-ssh
-MAINTAINER Marcus Hughes <hello@msh100.ukk>
+MAINTAINER Tommy Tang <twhtanghk@gmail.com>
 
 # Update apt and install encfs
 ENV DEBIAN_FRONTEND noninteractive
