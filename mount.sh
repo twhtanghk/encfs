@@ -33,7 +33,13 @@ umount -f $MOUNT_TARGET
 
 # Mount away!
 if [ "$ENCFS_PASS" ]; then
-    exec encfs -o allow_other -f --extpass='/bin/echo $ENCFS_PASS' $MOUNT_SOURCE $MOUNT_TARGET
+    encfs -o allow_other --extpass='/bin/echo $ENCFS_PASS' $MOUNT_SOURCE $MOUNT_TARGET
 else
-    exec encfs -o allow_other -f $MOUNT_SOURCE $MOUNT_TARGET
+    encfs -o allow_other $MOUNT_SOURCE $MOUNT_TARGET
 fi
+
+# update root passwd
+echo "root:${SSHFS_PASS}" |chpasswd
+
+# Start sshd
+/usr/sbin/sshd -D
