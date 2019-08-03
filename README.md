@@ -7,3 +7,7 @@ Secure remote storage using sshfs and encfs
 3. docker-compose -f docker-compose.yml up -d
 4. run client container (e.g. debian:jessie with sshfs installed) and commnd sshfs encfs_encfs_1:/data /mnt
 5. create /mnt/file and check encypted file under host directory ./raw
+
+# manually start container
+1. docker run --privileged -v $HOME/.raw:/root/.raw -it twhtanghk/encfs bash
+2. mkdir ~/crypt; encfs ~/.raw ~/crypt
